@@ -1,0 +1,86 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HBI test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+
+<body>
+	<div id="container">
+		<div id="copy">
+			<div>
+				<h1>Ronda Rousey Will Be the First Woman Inducted into the UFC Hall of Fame</h1>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+<style>
+	#container {
+		margin: auto;
+		background-image: url(https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2018%2F06%2Fronda-rousey-first-woman-inducted-ufc-hall-of-fame.jpg); 
+		background-size: cover; 
+		background-position: center;
+		height: 20vh; 
+		width: 50vw;
+		-webkit-transition-duration: 0.4s;
+	    -moz-transition-duration: 0.4s;
+	    -o-transition-duration: 0.4s;
+	    transition-duration: 0.4s;
+
+	    transition-property: width, height;
+	    cursor: pointer;
+	}
+	#copy {
+		height: 100%;
+		max-width: 600px;
+		margin: auto;
+		display: flex;
+		justify-content: center; /* align horizontal */
+		align-items: center; /* align vertical */
+		transition-duration: 0.4s;
+		transition-property: max-width;
+	}
+	.expanded {
+		height: 100% !important;
+		width: 100% !important;
+	}
+	.expanded h1 {
+		font-size: 50px;
+	}
+	.expanded #copy {
+		max-width: 1000px;
+	}
+	h1 {
+		color: white;
+		font-family: sans-serif;
+		margin: 0;
+		transition-duration: 0.4s;
+		transition-property: font-size;
+	}
+	body {
+		background: #1e1e1e;
+		margin: 0;
+	}
+	html, body {
+		height: 100%;
+	}
+</style>
+
+<script>
+	$('#container').click(function() {
+		if ($('#container').hasClass('expanded')) {
+			$('#container').removeClass('expanded')
+		}
+		else {
+			$('#container').addClass('expanded');
+		}
+	});
+
+
+</script>
+</html>
